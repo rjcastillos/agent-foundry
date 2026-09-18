@@ -1,17 +1,11 @@
 ---
 title: AISeed Foundry Repository Conventions
-version: 1.0
-owner: Ramon Castillo Sanchez
-        ramon.castillosanchez@rewe-group.com
+version: 1.0.0
+owner: Ramon Castillo
         ramon@rcastillo.net
 ---
 
-title: AISeed Foundry Repository Conventions
-version: 1.0.0
-owner: Ramon Castillo
----
-
-# AISeed Foundry Repository Conventions
+## Agent Foundry Repository Conventions
 
 ## Repository Description
 
@@ -19,7 +13,7 @@ AISeed Foundry is a centralized collection of reusable AI engineering assets inc
 
 ---
 
-# Purpose
+## Purpose
 
 The repository provides a common location for:
 
@@ -37,7 +31,7 @@ All assets should be designed for reuse across multiple projects.
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```text
 aiseed-foundry/
@@ -61,7 +55,7 @@ aiseed-foundry/
 
 ---
 
-# Naming Standards
+## Naming Standards
 
 ## General Principles
 
@@ -92,7 +86,7 @@ azure-cost-optimizer
 
 ---
 
-# Case Convention
+## Case Convention
 
 ## Repository Names
 
@@ -514,4 +508,40 @@ experiment/langgraph-evaluation
 
 # Asset Metadata Standard
 
-Every reusable asset should expose
+Every reusable asset should expose metadata in its primary documentation file:
+
+```yaml
+---
+name: example-skill
+description: Short description of the capability.
+version: 0.1.0
+status: experimental
+tags:
+    - example
+compatibility:
+    - github-copilot
+dependencies: []
+---
+```
+
+Required fields are `name`, `description`, `version`, and `status`. Use `tags`, `compatibility`, and `dependencies` whenever they provide useful discovery or setup information.
+
+Allowed statuses are:
+
+- `draft`: incomplete or still being designed
+- `experimental`: usable, but the interface may change
+- `stable`: documented and suitable for regular reuse
+- `deprecated`: retained for migration, but should not be adopted
+
+## Required asset documentation
+
+Every asset must explain:
+
+- its purpose and intended users
+- inputs, outputs, and prerequisites
+- installation or copy location
+- usage examples
+- dependencies, permissions, and compatibility limits
+- version and current status
+
+Use the category-specific templates as the starting point. Keep each asset self-contained so it can be copied into a consuming repository without relying on undocumented files elsewhere in the catalog.

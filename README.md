@@ -1,4 +1,4 @@
-# AISeed Foundry
+# Agent Foundry
 
 > A centralized collection of reusable AI engineering assets, including agents, skills, prompts, workflows, templates, MCP integrations, examples, and knowledge bases.
 
@@ -19,10 +19,10 @@ The repository focuses on:
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```text
-aiseed-foundry/
+agent-foundry/
 │
 ├── agents/
 ├── skills/
@@ -43,7 +43,7 @@ aiseed-foundry/
 
 ---
 
-# Asset Types
+## Asset Types
 
 ## Agents
 
@@ -183,7 +183,31 @@ examples/
 
 ---
 
-# Standards
+## Reusing an Asset
+
+The directories in this repository are the canonical, visible source of truth. They are intentionally not hidden: visible folders are easier to browse, search, review, and contribute to.
+
+To use an asset in another repository:
+
+1. Browse the relevant category and read the asset's documentation.
+2. Check its status, version, dependencies, and compatibility.
+3. Copy the asset into the location expected by the consuming tool.
+4. Preserve local changes separately from the canonical asset when possible.
+
+Some tools expect hidden directories such as `.agents/`. That is a destination convention, not a requirement for this source repository. A future installer or export tool can copy assets to tool-specific destinations without making the catalog itself hidden.
+
+## Asset Status
+
+Every reusable asset should declare one of these statuses:
+
+- `draft`: incomplete or still being designed
+- `experimental`: usable, but its interface may change
+- `stable`: documented and suitable for regular reuse
+- `deprecated`: retained for migration, but should not be adopted
+
+The repository is currently an early catalog: `skills/gocoder/` is the first fully defined asset; most other directories contain templates or placeholders.
+
+## Standards
 
 This repository follows a consistent set of naming and organizational conventions.
 
@@ -203,13 +227,13 @@ Key principles:
 
 ---
 
-# Getting Started
+## Getting Started
 
 Clone the repository:
 
 ```bash
 git clone <repository-url>
-cd aiseed-foundry
+cd agent-foundry
 ```
 
 Explore available assets:
@@ -232,7 +256,7 @@ templates/
 
 ---
 
-# Recommended Workflow
+## Recommended Workflow
 
 1. Identify a reusable capability.
 2. Create a corresponding Agent, Skill, Prompt, or Workflow.

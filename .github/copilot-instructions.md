@@ -15,6 +15,11 @@ AISeed Foundry is a source repository for reusable AI engineering assets: agents
 - Do not add generated outputs, dependency directories, caches, secrets, or local environment files to version control.
 - Preserve user changes and avoid unrelated formatting or content changes.
 
+# General Coding Instructions
+
+- Very important: Use internal program documentation to make the code more human readable and understandable.
+
+
 ## Source and Generated Projects
 
 This repository is the canonical source. When assets are projected into a real generated project, GitHub- and Copilot-specific files belong under `.github/`, including:

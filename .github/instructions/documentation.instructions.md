@@ -5,6 +5,9 @@ applyTo: "**/*.md"
 # Documentation Instructions
 
 - Use clear headings and concise sections.
+- Use grpahical elements (e.g., tables, lists) to organize information.
+- Use consistent formatting for code snippets, commands, and file paths.
+- Use charts, diagrams, or images whenever is possible.
 - Use repository-relative paths in examples and links.
 - Use fenced `text`, `bash`, `python`, or other appropriate code blocks for directory trees and commands.
 - Keep directory trees synchronized with the actual repository structure.

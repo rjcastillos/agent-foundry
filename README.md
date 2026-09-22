@@ -1,4 +1,4 @@
-# Agent Foundry
+# AISeed Foundry
 
 > A centralized collection of reusable AI engineering assets, including agents, skills, prompts, workflows, templates, MCP integrations, examples, and knowledge bases.
 
@@ -19,7 +19,7 @@ The repository focuses on:
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```text
 agent-foundry/
@@ -32,6 +32,7 @@ agent-foundry/
 ├── mcp/
 ├── examples/
 ├── knowledge/
+├── copilot/
 ├── docs/
 ├── tools/
 │
@@ -43,7 +44,7 @@ agent-foundry/
 
 ---
 
-## Asset Types
+# Asset Types
 
 ## Agents
 
@@ -171,6 +172,22 @@ knowledge/
 
 ---
 
+## Copilot Memory
+
+Repository-level decisions and prompt history for reusable AI assets are maintained in:
+
+```text
+copilot/
+├── decisions/
+└── prompt-history/
+```
+
+Use `copilot/decisions/` to record durable decisions with their rationale and affected areas. Use `copilot/prompt-history/` to record significant changes to prompts, agents, and skills.
+
+Generated projects should keep their local Copilot instructions and memory under `.github/copilot/`.
+
+---
+
 ## Examples
 
 Working examples demonstrating how assets can be implemented and used.
@@ -183,33 +200,24 @@ examples/
 
 ---
 
-## Reusing an Asset
+# Standards
 
-The directories in this repository are the canonical, visible source of truth. They are intentionally not hidden: visible folders are easier to browse, search, review, and contribute to.
+## Repository Tools
 
-To use an asset in another repository:
+The repository includes an overlay synchronizer for copying reusable assets
+from this repository into a related target repository without deleting
+target-only content:
 
-1. Browse the relevant category and read the asset's documentation.
-2. Check its status, version, dependencies, and compatibility.
-3. Copy the asset into the location expected by the consuming tool.
-4. Preserve local changes separately from the canonical asset when possible.
+```text
+tools/scripts/sync_repo/
+```
 
-Some tools expect hidden directories such as `.agents/`. That is a destination convention, not a requirement for this source repository. A future installer or export tool can copy assets to tool-specific destinations without making the catalog itself hidden.
+The synchronizer honors the source `.gitignore` and reports whether each
+target path was skipped, created, replaced, or left unchanged. See
+`tools/scripts/sync_repo/README.md` for usage and output details.
+When SOURCE is a Git worktree, untracked files are skipped and a summary of
+scanned, created, and changed files is printed at completion.
 
-## Asset Status
-
-Every reusable asset should declare one of these statuses:
-
-- `draft`: incomplete or still being designed
-- `experimental`: usable, but its interface may change
-- `stable`: documented and suitable for regular reuse
-- `deprecated`: retained for migration, but should not be adopted
-
-The repository is currently an early catalog: `skills/gocoder/` is the first fully defined asset; most other directories contain templates or placeholders.
-
-## Standards
-
-This repository follows a consistent set of naming and organizational conventions.
 
 See:
 
@@ -224,10 +232,13 @@ Key principles:
 - Version reusable assets
 - Keep assets self-contained
 - Design for reuse across projects
+- Keep generated test outputs under `output/`
+- Do not commit dependency directories such as `node_modules/`
+- Commit lockfiles when they provide reproducible installs
 
 ---
 
-## Getting Started
+# Getting Started
 
 Clone the repository:
 
@@ -256,7 +267,7 @@ templates/
 
 ---
 
-## Recommended Workflow
+# Recommended Workflow
 
 1. Identify a reusable capability.
 2. Create a corresponding Agent, Skill, Prompt, or Workflow.

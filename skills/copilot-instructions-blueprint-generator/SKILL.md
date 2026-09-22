@@ -249,7 +249,7 @@ ${VERSIONING == "Custom" ?
 ## Prompt and Decision Memory
 
 - Keep project memory under `.github/copilot/`, alongside the generated instructions
-- Record prompts introduced or substantially changed in `.github/copilot/prompt-history.md`
+- Record prompts introduced or substantially changed in `.github/copilot/prompt-history/`
 - Record important implementation or configuration decisions in `.github/copilot/decisions/`
 - For every recorded decision, include its justification, affected files or areas, date, and status
 - Update the memory record when a decision changes, and preserve the previous rationale for traceability
@@ -299,8 +299,9 @@ To create the copilot-instructions.md file, first analyze the codebase to:
 ### 3. Implementation Notes
 
 The final copilot-instructions.md should:
-- Be placed in the .github/copilot directory
-- Include or link to `.github/copilot/prompt-history.md` and `.github/copilot/decisions/`
+- Place the generated file at `.github/copilot-instructions.md`
+- Store project-specific memory under `.github/copilot/`
+- Include or link to `.github/copilot/prompt-history/` and `.github/copilot/decisions/`
 - Require an update to the repository's global README when the generated change affects repository structure, reusable assets, supported technologies, conventions, or user-facing workflows
 - Reference only patterns and standards that exist in the codebase
 - Include explicit version compatibility requirements

@@ -1,8 +1,8 @@
-# AISeed Foundry
+# Agent Foundry
 
 > A centralized collection of reusable AI engineering assets, including agents, skills, prompts, workflows, templates, MCP integrations, examples, and knowledge bases.
 
-AISeed Foundry serves as a personal and collaborative foundation for building, sharing, and reusing AI-powered development assets across projects. The repository is designed to promote consistency, accelerate development, and capture proven patterns for Agentic AI solutions.
+Agent Foundry serves as a personal and collaborative foundation for building, sharing, and reusing AI-powered development assets across projects. The repository is designed to promote consistency, accelerate development, and capture proven patterns for Agentic AI solutions.
 
 ## Vision
 
@@ -32,6 +32,7 @@ agent-foundry/
 ├── mcp/
 ├── examples/
 ├── knowledge/
+├── .github/
 ├── copilot/
 ├── docs/
 ├── tools/
@@ -41,6 +42,30 @@ agent-foundry/
 ├── LICENSE
 └── .gitignore
 ```
+
+---
+
+# For a real generated project, use .github/ for GitHub- and Copilot-specific assets:
+
+```text
+.github/
+├── copilot-instructions.md
+├── instructions/
+├── agents/
+├── prompts/
+├── skills/
+├── copilot/
+│   ├── decisions/
+│   └── prompt-history/
+└── workflows/
+```
+
+# However, not everything belongs there
+docs/       # General project documentation
+adr/        # Optional architecture decision records
+src/        # Application source
+tests/      # Tests
+.vscode/    # Editor and MCP configuration, where applicable
 
 ---
 

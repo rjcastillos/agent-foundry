@@ -1,0 +1,47 @@
+# AISeed Foundry Copilot Instructions
+
+## Repository Purpose
+
+AISeed Foundry is a source repository for reusable AI engineering assets: agents, skills, prompts, workflows, MCP integrations, templates, examples, knowledge, documentation, and automation tools.
+
+## Core Rules
+
+- Treat the visible root-level directories as the canonical source layout for this repository.
+- Keep reusable assets technology-agnostic unless the asset explicitly targets a technology.
+- Inspect the target directory and neighboring examples before adding or changing an asset.
+- Follow the naming, file-layout, metadata, and Markdown conventions in `docs/repository-conventions.md`.
+- Keep changes focused; do not reorganize the repository or introduce new top-level directories without documenting the convention.
+- Prefer existing templates and patterns over introducing a new format.
+- Do not add generated outputs, dependency directories, caches, secrets, or local environment files to version control.
+- Preserve user changes and avoid unrelated formatting or content changes.
+
+## Source and Generated Projects
+
+This repository is the canonical source. When assets are projected into a real generated project, GitHub- and Copilot-specific files belong under `.github/`, including:
+
+- `.github/copilot-instructions.md`
+- `.github/instructions/`
+- `.github/agents/`
+- `.github/prompts/`
+- `.github/skills/`
+- `.github/workflows/`
+- `.github/copilot/decisions/`
+- `.github/copilot/prompt-history/`
+
+General documentation, application source, tests, and editor configuration remain outside `.github/` unless the target project has an established convention that requires otherwise.
+
+## Documentation and Memory
+
+- Record durable repository decisions in `copilot/decisions/`.
+- Record substantial prompt, agent, or skill changes in `copilot/prompt-history/`.
+- For generated projects, use the corresponding `.github/copilot/` directories.
+- Update the relevant README or convention document when changing repository structure, reusable asset formats, supported technologies, or user-facing workflows.
+- Use repository-relative paths in documentation; do not document machine-specific paths.
+
+## Validation
+
+Before completing a change:
+
+1. Check the changed Markdown for valid structure and consistent paths.
+2. Run the narrowest relevant test or script validation available.
+3. Review the final diff for unrelated changes and accidental generated files.

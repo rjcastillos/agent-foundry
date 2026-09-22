@@ -1,12 +1,12 @@
 ---
-title: AISeed Foundry Repository Conventions
+title: Agent Foundry Repository Conventions
 version: 1.0
 owner: Ramon Castillo Sanchez
         ramon.castillosanchez@rewe-group.com
         ramon@rcastillo.net
 ---
 
-title: AISeed Foundry Repository Conventions
+title: Agent Foundry Repository Conventions
 version: 1.0.0
 owner: Ramon Castillo
 ---
@@ -50,6 +50,7 @@ agent-foundry/
 ├── mcp/
 ├── examples/
 ├── knowledge/
+├── .github/
 ├── docs/
 ├── tools/
 │
@@ -59,6 +60,28 @@ agent-foundry/
 └── .gitignore
 ```
 
+
+# For a real generated project, use .github/ for GitHub- and Copilot-specific assets:
+
+```text
+.github/
+├── copilot-instructions.md
+├── instructions/
+├── agents/
+├── prompts/
+├── skills/
+├── copilot/
+│   ├── decisions/
+│   └── prompt-history/
+└── workflows/
+```
+
+# However, not everything belongs there
+docs/       # General project documentation
+adr/        # Optional architecture decision records
+src/        # Application source
+tests/      # Tests
+.vscode/    # Editor and MCP configuration, where applicable
 ---
 
 # Naming Standards

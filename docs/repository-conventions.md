@@ -11,7 +11,7 @@ version: 1.0.0
 owner: Ramon Castillo
 ---
 
-# AISeed Foundry Repository Conventions
+# Agent Foundry Repository Conventions
 
 ## Repository Description
 

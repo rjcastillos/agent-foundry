@@ -38,3 +38,8 @@ reverts a previous commit.
 
 ##test: 
 commits that add missing tests or correct existing tests
+
+##dummy:
+dummy commits ... eh... try to avoid them buddy ;) 
+
+These guide lines might be compared with your organizations in which case SHALL supersede these above.

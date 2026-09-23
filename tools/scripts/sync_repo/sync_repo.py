@@ -36,10 +36,16 @@ import subprocess
 # ============================================================================
 
 SOURCE = "/home/a233c1f/agent-foundry"
-TARGET = "/home/a233c1f/agent-foundry"
+TARGET = "/home/a233c1f/aiseed-foundry"
 
 SOURCE_REPO = "agent-foundry"
-TARGET_REPO = "agent-foundry"
+TARGET_REPO = "aiseed-foundry"
+
+#SOURCE = "/home/a233c1f/aiseed-foundry"
+#TARGET = "/home/a233c1f/agent-foundry"
+
+#SOURCE_REPO = "aiseed-foundry"
+#TARGET_REPO = "agent-foundry"
 
 SOURCE_GITIGNORE = Path(SOURCE) / ".gitignore"
 

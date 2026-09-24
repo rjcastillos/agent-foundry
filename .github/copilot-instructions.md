@@ -1,9 +1,8 @@
-# AISeed Foundry Copilot Instructions
+# Agent Foundry Copilot Instructions
 
 ## Repository Purpose
 
-AISeed Foundry is a source repository for reusable AI engineering assets: agents, skills, prompts, workflows, MCP integrations, templates, examples, knowledge, documentation, and automation tools.
-
+Agent Foundry is a source repository for reusable AI engineering assets: agents, skills, prompts, workflows, MCP integrations, templates, examples, knowledge, documentation, and automation tools.
 ## Core Rules
 
 - Treat the visible root-level directories as the canonical source layout for this repository.

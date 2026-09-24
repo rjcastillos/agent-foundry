@@ -107,11 +107,17 @@ Location:
 skills/
 ```
 
+The repository consistency audit is available as the reusable skill
+[`skills/repository-consistency-review/SKILL.md`](skills/repository-consistency-review/SKILL.md).
+
 ---
 
 ## Prompts
 
 Reusable prompt libraries for common engineering and operational tasks.
+
+For repeatable repository audits, use [`prompts/repository-consistency-review.prompt.md`](prompts/repository-consistency-review.prompt.md)
+and record the resulting review in `copilot/prompt-history/`.
 
 Examples:
 
@@ -305,7 +311,7 @@ templates/
 
 # Target Audience
 
-AISeed Foundry is intended for:
+Agent Foundry is intended for:
 
 - AI Engineers
 - DevOps Engineers

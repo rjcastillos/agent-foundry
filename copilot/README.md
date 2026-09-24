@@ -1,6 +1,6 @@
 # Copilot Memory
 
-This directory records decisions and prompt evolution for the reusable assets in AISeed Foundry.
+This directory records decisions and prompt evolution for the reusable assets in Agent Foundry.
 
 ## Structure
 

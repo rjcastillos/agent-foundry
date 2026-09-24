@@ -15,7 +15,7 @@ owner: Ramon Castillo
 
 ## Repository Description
 
-AISeed Foundry is a centralized collection of reusable AI engineering assets including agents, skills, prompts, workflows, templates, MCP integrations, examples, and knowledge bases. The repository is designed to accelerate development, standardize best practices, and promote reuse across AI-driven projects.
+Agent Foundry is a centralized collection of reusable AI engineering assets including agents, skills, prompts, workflows, templates, MCP integrations, examples, and knowledge bases. The repository is designed to accelerate development, standardize best practices, and promote reuse across AI-driven projects.
 
 ---
 

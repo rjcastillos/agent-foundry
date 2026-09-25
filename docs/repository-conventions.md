@@ -1,14 +1,9 @@
 ---
 title: Agent Foundry Repository Conventions
-version: 1.0
+version: 1.0.0
 owner: Ramon Castillo Sanchez
         ramon.castillosanchez@rewe-group.com
         ramon@rcastillo.net
----
-
-title: Agent Foundry Repository Conventions
-version: 1.0.0
-owner: Ramon Castillo
 ---
 
 # Agent Foundry Repository Conventions

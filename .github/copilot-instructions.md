@@ -13,6 +13,10 @@ Agent Foundry is a source repository for reusable AI engineering assets: agents,
 - Prefer existing templates and patterns over introducing a new format.
 - Do not add generated outputs, dependency directories, caches, secrets, or local environment files to version control.
 - Preserve user changes and avoid unrelated formatting or content changes.
+- When a skill exists both under `.github/skills/` and root-level `skills/`,
+  apply the `.github/skills/` version to the current project. Treat the
+  root-level version as the reusable source asset and starting point for
+  external projects.
 
 # General Coding Instructions
 

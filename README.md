@@ -45,7 +45,17 @@ agent-foundry/
 
 ---
 
-# For a real generated project, use .github/ for GitHub- and Copilot-specific assets:
+# Source Assets from this repo and real Generated Projects using this repo assets
+
+The root-level directories are the canonical source catalog for Agent Foundry.
+For example, reusable skills are authored under:
+
+```text
+skills/<skill-name>/SKILL.md
+```
+
+When these assets are copied into another project, GitHub- and
+Copilot-specific assets belong under that project's `.github/` directory:
 
 ```text
 .github/
@@ -59,6 +69,20 @@ agent-foundry/
 │   └── prompt-history/
 └── workflows/
 ```
+
+If both locations exist in the same project:
+
+- `.github/skills/` is the active project-local configuration.
+- Root-level `skills/` is the reusable source and reference catalog.
+- Changes made to `.github/skills/` do not automatically update the source asset.
+- New or improved reusable content should be copied back to the root-level
+    source directory deliberately.
+- Generated projects may customize their `.github/skills/` copy without
+    changing the Agent Foundry source asset.
+
+For this repository, `.github/` contains repository-local instructions.
+Root-level assets remain the canonical reusable source unless a specific
+instruction explicitly states otherwise.
 
 # However, not everything belongs there
 docs/       # General project documentation
@@ -271,29 +295,38 @@ Key principles:
 
 # Getting Started
 
-Clone the repository:
+Agent Foundry is a catalog of reusable agents, skills, prompts, workflows,
+templates, examples, knowledge, and automation tools.
 
-```bash
-git clone <repository-url>
-cd agent-foundry
-```
+## Explore the Repository
 
-Explore available assets:
+Start with:
 
-```bash
-tree -L 2
-```
+- `agents/` for reusable agent definitions
+- `skills/` for reusable capability playbooks
+- `prompts/` for reusable prompt definitions
+- `workflows/` for repeatable processes
+- `templates/` for new asset starting points
+- `docs/repository-conventions.md` for naming and structure rules
 
-Review repository standards:
+## Create a Reusable Asset
+
+1. Identify the asset type.
+2. Copy the corresponding directory from `templates/`.
+3. Give the asset a descriptive kebab-case name.
+4. Add required metadata and usage instructions.
+5. Include examples where they clarify expected behavior.
+6. Validate paths, entry-point names, and Markdown structure.
+
+## Use an Asset in Another Project
+
+Copy the selected asset into the appropriate project-local location.
+GitHub- and Copilot-specific assets normally belong under `.github/`.
+
+For skills, use:
 
 ```text
-docs/repository-conventions.md
-```
-
-Create new assets from the provided templates:
-
-```text
-templates/
+.github/skills/<skill-name>/SKILL.md
 ```
 
 ---
